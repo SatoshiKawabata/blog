@@ -3,8 +3,16 @@ var proxy = require("http-proxy-middleware")
 module.exports = {
   siteMetadata: {
     title: 'blog.kwst.site',
-    description:
-      'kwst blog',
+    description: 'kwst blog',
+    copyright: {
+      name: 'kwst.site',
+      startYear: 2019,
+    },
+    sns: {
+      facebook: 'https://facebook.com',
+      twitter: 'https://twitter.com/kwbtsts',
+      github: 'https://github.com/SatoshiKawabata/blog',
+    }
   },
   plugins: [
     'gatsby-plugin-react-helmet',

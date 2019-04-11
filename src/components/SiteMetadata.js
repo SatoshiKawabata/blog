@@ -8,6 +8,15 @@ const useSiteMetadata = () => {
           siteMetadata {
             title
             description
+            copyright {
+              name
+              startYear
+            }
+            sns {
+              facebook
+              twitter
+              github
+            }
           }
         }
       }
