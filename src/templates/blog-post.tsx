@@ -55,6 +55,7 @@ BlogPostTemplate.propTypes = {
 }
 
 const BlogPost = ({ data }) => {
+  console.log("data", data)
   const { markdownRemark: post } = data
 
   return (
@@ -85,6 +86,15 @@ BlogPost.propTypes = {
   }),
 }
 
+interface MarkdownRemark {
+  id: string
+  html: string
+  frontmatter: {
+    date: string
+    title: string
+  }
+}
+
 export default BlogPost
 
 export const pageQuery = graphql`
@@ -95,8 +105,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
-        tags
       }
     }
   }

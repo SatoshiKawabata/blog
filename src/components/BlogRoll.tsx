@@ -1,13 +1,28 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 
-class BlogRoll extends React.Component {
-  render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+interface Props {
+  data: {
+    allMarkdownRemark: {
+      edges: {
+        node: {
+          excerpt: string
+          id: string
+          fields: { slug: string }
+          frontmatter: {
+            title: string
+            templateKey: string
+            date: string
+          }
+        }
+      }[]
+    }
+  }
+}
 
-    return (
+const BlogRoll = ({ data }: Props) => {
+  const { edges: posts } = data.allMarkdownRemark
+  return (
       <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
@@ -39,15 +54,6 @@ class BlogRoll extends React.Component {
           ))}
       </div>
     )
-  }
-}
-
-BlogRoll.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
 }
 
 export default () => (
