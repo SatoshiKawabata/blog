@@ -1,4 +1,4 @@
-import CMS from 'netlify-cms'
+const CMS = require('netlify-cms')
 
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
