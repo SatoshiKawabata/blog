@@ -17,7 +17,7 @@ Netlify CMSとGatsbyで作られたブログ記事が公開されるまで
 
 前提として、[Githubリポジトリ](https://github.com/SatoshiKawabata/blog)とNetlifyを連携しているので、masterブランチにpushされる度にNetlifyでデプロイが走るようになっています。
 
-また、Netlify CMSの下書き機能を使用しているので、Githubのプルリクエストと連動するようにしています。
+また、Netlify CMSの下書き機能を使用しているので、Githubのプルリクエストと連動するようにしています。Githubのリポジトリを公開しているので下書きの意味は全く無いですが。。
 
 下書き機能についても↓こちらの記事を参考にしました。
 
