@@ -41,8 +41,12 @@ const TemplateWrapper: React.StatelessComponent<React.Props<{}>> = ({ children }
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="fb:app_id" content="876901109074739" />
 
         <meta name="twitter:card" content="summary"></meta>
         <meta name="twitter:title" content={title} />
