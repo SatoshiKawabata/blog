@@ -8,6 +8,7 @@ date: 2019-04-13T07:14:24.263Z
 TypeScriptを導入してみた作業ログです。
 
 手順は主にこれの通りやりました。
+
 https://qiita.com/otanu/items/f8840e66fb5e0993086d
 
 Gatsbyのプラグインをインストール
@@ -51,6 +52,7 @@ npm i -D typescript @types/react @types/react-dom @types/react-helmet @types/lod
 コンポーネントに対して全て型を付けていきました。
 
 ステートレスなコンポーネントの型の付け方は↓こちらの記事を参考にしました。
+
 [TypeScript & Stateless Component でchildrenプロパティを扱う](https://qiita.com/r-tamura/items/1bf0e72433f96a5a2f14)
 
 `React.StatelessComponent<React.Props<{}>>`とすれば良いみたい。
