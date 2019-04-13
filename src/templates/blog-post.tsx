@@ -40,7 +40,6 @@ export const BlogPostTemplate = ({
 }
 
 const BlogPost = ({ data }: { data: { markdownRemark: MarkdownRemark }}) => {
-  console.log("data", data)
   const { markdownRemark: post } = data
 
   return (
