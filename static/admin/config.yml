@@ -5,12 +5,17 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
 collections:
   - name: "kwst blog"
     label: "KWST Blog"
     folder: "src/pages"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}"
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
