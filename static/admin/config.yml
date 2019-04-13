@@ -12,6 +12,8 @@ collections:
     create: true
     slug:
       encoding: "ascii"
+      clean_accents: true
+      sanitize_replacement: "_"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
