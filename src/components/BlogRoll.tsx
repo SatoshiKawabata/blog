@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 
-interface Props {
+interface Props extends React.Props<{}> {
   data: {
     allMarkdownRemark: {
       edges: {
@@ -20,7 +20,7 @@ interface Props {
   }
 }
 
-const BlogRoll = ({ data }: Props) => {
+const BlogRoll: React.StatelessComponent<Props> = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
   return (
       <div className="columns is-multiline">
@@ -81,6 +81,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data) => <BlogRoll data={data} />}
   />
 )

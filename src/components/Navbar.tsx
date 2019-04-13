@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const Navbar = () => {
+const Navbar: React.StatelessComponent<React.Props<{}>> = () => {
   return (
     <nav
       className="navbar is-transparent"

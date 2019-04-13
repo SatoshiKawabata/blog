@@ -1,15 +1,15 @@
 import React from 'react'
 
-interface Props {
-  content: Node
-  className: string
+export interface ContentProps extends React.Props<{}> {
+  content: string
+  className?: string
 }
 
-export const HTMLContent = ({ content, className }: Props) => (
+export const HTMLContent: React.StatelessComponent<ContentProps> = ({ content, className }) => (
   <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
 )
 
-const Content = ({ content, className }: Props) => (
+const Content: React.StatelessComponent<ContentProps> = ({ content, className }) => (
   <div className={className}>{content}</div>
 )
 

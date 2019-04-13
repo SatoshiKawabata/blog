@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 
-const IndexPageTemplate = () => {
+const IndexPageTemplate: React.StatelessComponent<React.Props<{}>> = () => {
   return (
     <Layout>
       <div
