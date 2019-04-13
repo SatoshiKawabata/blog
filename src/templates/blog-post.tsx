@@ -27,7 +27,6 @@ export const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
             {
               ContentComponent
                 ? <ContentComponent content={content} />
@@ -49,7 +48,6 @@ const BlogPost = ({ data }: { data: { markdownRemark: MarkdownRemark }}) => {
       <BlogPostTemplate
         content={post.html}
         ContentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
