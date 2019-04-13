@@ -8,7 +8,6 @@ import Content, { HTMLContent, ContentProps } from '../components/Content'
 interface Props {
   content: string
   ContentComponent?: React.StatelessComponent<ContentProps>
-  description: string
   helmet?: JSX.Element
   title: string
 }
@@ -16,7 +15,6 @@ interface Props {
 export const BlogPostTemplate = ({
   content,
   ContentComponent,
-  description,
   title,
   helmet,
 }: Props) => {
@@ -93,7 +91,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
       }
     }
   }
