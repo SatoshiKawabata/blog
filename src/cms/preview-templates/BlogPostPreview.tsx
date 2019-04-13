@@ -9,7 +9,6 @@ interface Props extends React.Props<{}> {
 const BlogPostPreview: React.StatelessComponent<Props> = ({ entry, widgetFor }) => (
   <BlogPostTemplate
     content={widgetFor('body')}
-    description={entry.getIn(['data', 'description'])}
     title={entry.getIn(['data', 'title'])}
   />
 )
