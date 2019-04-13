@@ -1,13 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Copyright from './Copyright'
-import facebook from '../img/social/facebook.svg'
-import twitter from '../img/social/twitter.svg'
-import github from "../img/github-icon.svg"
+const facebook = require('../img/social/facebook.svg')
+const twitter = require('../img/social/twitter.svg')
+const github = require("../img/github-icon.svg")
 import useSiteMetadata from './SiteMetadata'
 
-const Footer = () => {
+const Footer: React.StatelessComponent<React.Props<{}>> = () => {
   const { copyright, sns } = useSiteMetadata();
   return (
     <footer className="footer has-background-black has-text-white-ter">
