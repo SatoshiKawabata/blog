@@ -10,6 +10,7 @@ interface Props {
   ContentComponent?: React.StatelessComponent<ContentProps>
   helmet?: JSX.Element
   title: string
+  date: string
 }
 
 export const BlogPostTemplate = ({
@@ -17,6 +18,7 @@ export const BlogPostTemplate = ({
   ContentComponent,
   title,
   helmet,
+  date
 }: Props) => {
   return (
     <section className="section">
@@ -27,6 +29,7 @@ export const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+            <p>{date}</p>
             {
               ContentComponent
                 ? <ContentComponent content={content} />
@@ -59,15 +62,10 @@ const BlogPost = ({ data }: { data: { markdownRemark: MarkdownRemark }}) => {
           </Helmet>
         }
         title={post.frontmatter.title}
+        date={post.frontmatter.date}
       />
     </Layout>
   )
-}
-
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
 }
 
 interface MarkdownRemark {
