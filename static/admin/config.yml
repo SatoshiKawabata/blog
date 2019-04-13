@@ -6,11 +6,11 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "kwst blog"
-    label: "KWST Blog"
+  - name: "blog"
+    label: "Blog"
     folder: "src/pages"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}"
+    slug: "{{year}}{{month}}{{day}}{{minute}}{{second}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
