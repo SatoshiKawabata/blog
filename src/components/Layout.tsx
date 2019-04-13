@@ -44,6 +44,7 @@ const TemplateWrapper: React.StatelessComponent<React.Props<{}>> = ({ children }
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og.png" />
 
+        <meta name="twitter:card" content="summary"></meta>
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content="/img/logo_180.png" />
