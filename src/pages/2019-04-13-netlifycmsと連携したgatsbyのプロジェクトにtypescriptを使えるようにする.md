@@ -64,4 +64,4 @@ const IndexPageTemplate: React.StatelessComponent<React.Props<{}>> = () => {
 とりあえずこれでTypeScriptの導入はできました。
 
 ここまでのソース
-[revision 732975c](https://github.com/SatoshiKawabata/blog/tree/732975c7e22c2625368c1dd897f74764e739db1a)
+[revision 975d8ae](https://github.com/SatoshiKawabata/blog/tree/975d8ae4dbee6c8fbe218859b6e4b5ab99a47156)
