@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: NetlifyCMSと連携したGatsbyのプロジェクトにTypeScriptを使えるようにする
 date: 2019-04-13T07:14:24.263Z
+description: TypeScriptを導入してみた作業ログです。
 ---
 # NetlifyCMSと連携したGatsbyのプロジェクトにTypeScriptを使えるようにする
 

@@ -9,9 +9,9 @@ module.exports = {
       startYear: 2019,
     },
     sns: {
-      facebook: 'https://facebook.com',
+      facebook: 'https://www.facebook.com/kawabata.satoshi',
       twitter: 'https://twitter.com/kwbtsts',
-      github: 'https://github.com/SatoshiKawabata/blog',
+      github: 'https://github.com/SatoshiKawabata',
     }
   },
   plugins: [

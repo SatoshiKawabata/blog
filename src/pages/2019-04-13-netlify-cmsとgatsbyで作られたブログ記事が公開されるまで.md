@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: Netlify CMSとGatsbyで作られたブログ記事が公開されるまで
 date: 2019-04-13T08:29:58.814Z
+description: このブログはNetlify CMSとGatsbyJSで作られています。
 ---
 Netlify CMSとGatsbyで作られたブログ記事が公開されるまで
 
