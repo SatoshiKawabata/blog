@@ -19,13 +19,19 @@ Netlify CMSとGatsbyで作られたブログ記事が公開されるまで
 
 記事を書いてSaveボタンを押します。
 
+![記事](/img/image.webp "記事を書く")
+
 ## 2. GithubにPRが作られる
 
 masterブランチに向けてプルリクエストが作られます。記事のマークダウンファイルが生成されたコミットができあがります。
 
+![プルリクエスト](/img/image-1-.webp "プルリクエスト")
+
 [Create Blog “2019-04-13-netlify-cmsとgatsbyで作られたブログ記事が公開されるまで” by SatoshiKawabata · Pull Request #15 · SatoshiKawabata/blog · GitHub](https://github.com/SatoshiKawabata/blog/pull/15)
 
 [生成されたマークダウン](https://github.com/SatoshiKawabata/blog/pull/15/files)はこんな感じです。
+
+![生成されたマークダウン](/img/image-5-.webp "生成されたマークダウン")
 
 ## 3. 記事をPublishする
 
@@ -35,9 +41,13 @@ Publishボタンを押します。
 
 プルリクエストがマージされて、masterブランチが更新されます。
 
+![マージされたプルリクエスト](/img/image-2-.webp "マージされたプルリクエスト")
+
 ## 5. Netlifyでデプロイが走る
 
 デプロイが走り、サイトが更新されます。
+
+![デプロイが走る](/img/image-3-.webp "デプロイが走る")
 
 ## 6. Gatsbyのビルドが走る
 
@@ -50,6 +60,8 @@ Gatsbyのビルドによって、記事のhtmlファイルが生成されます�
 この時に、マークダウンファイル→GraphQLでデータを取得→Reactで描画させてhtmlを吐き出しているのかなと思います。ここらへんはまだ把握していません。
 
 ローカルでビルドしてみると`public/`配下に記事のフォルダができていて、htmlファイルが生成されいてるのがわかります。
+
+![生成されたhtml](/img/image-4-.webp "生成されたhtml")
 
 ## 8. 記事が公開される
 
