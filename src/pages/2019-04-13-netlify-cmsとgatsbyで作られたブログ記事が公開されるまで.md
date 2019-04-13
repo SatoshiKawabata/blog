@@ -13,7 +13,15 @@ Netlify CMSとGatsbyで作られたブログ記事が公開されるまで
 
 備忘録として、記事を書いてから公開されるまでのフローをまとめてみます。
 
+## 0. 前提(Github連携、下書き機能)
+
 前提として、[Githubリポジトリ](https://github.com/SatoshiKawabata/blog)とNetlifyを連携しているので、masterブランチにpushされる度にNetlifyでデプロイが走るようになっています。
+
+また、Netlify CMSの下書き機能を使用しているので、Githubのプルリクエストと連動するようにしています。
+
+下書き機能についても↓こちらの記事を参考にしました。
+
+[Gatsby + Netlify CMSで作ったブログをカスタマイズする](https://shibe97.com/blog/gatsby-netlify-cms/)
 
 ## 1. 記事を書いて保存する
 
@@ -25,9 +33,9 @@ Netlify CMSとGatsbyで作られたブログ記事が公開されるまで
 
 masterブランチに向けてプルリクエストが作られます。記事のマークダウンファイルが生成されたコミットができあがります。
 
-![プルリクエスト](/img/image-1-.webp "プルリクエスト")
-
 [Create Blog “2019-04-13-netlify-cmsとgatsbyで作られたブログ記事が公開されるまで” by SatoshiKawabata · Pull Request #15 · SatoshiKawabata/blog · GitHub](https://github.com/SatoshiKawabata/blog/pull/15)
+
+![プルリクエスト](/img/image-1-.webp "プルリクエスト")
 
 [生成されたマークダウン](https://github.com/SatoshiKawabata/blog/pull/15/files)はこんな感じです。
 
@@ -66,3 +74,11 @@ Gatsbyのビルドによって、記事のhtmlファイルが生成されます�
 ## 8. 記事が公開される
 
 デプロイが完了して記事が公開されます。
+
+## まとめ
+
+以上が、記事作成〜公開のフローです。GithubのPRと連携しててイメージしやすくて良い感じです。もしデータを公開したくなければ、GithubのプライベートリポジトリやGitlabを使えばOKです。これだけの機能が無料でできちゃうのがすごいです。
+
+良くない点としては、デプロイの度に走るGatsbyのビルドに時間がかかる点です。記事の数が増えれば増えるほど時間がどんどんかかっていくのでしょうか。
+
+まだGatsbyについてそこまで把握してないので、これからやっていきたいです。
