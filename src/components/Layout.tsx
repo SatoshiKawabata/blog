@@ -55,7 +55,7 @@ const TemplateWrapper: React.StatelessComponent<React.Props<{}>> = ({ children }
 
         <style>{`
           pre {
-            background: smokewhite;
+            background: whitesmoke;
           }
 
           code {
