@@ -52,6 +52,16 @@ const TemplateWrapper: React.StatelessComponent<React.Props<{}>> = ({ children }
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content="/img/logo_180.png" />
+
+        <style>{`
+          pre {
+            background: smokewhite;
+          }
+
+          code {
+            font-family: Menlo, Monaco, 'Courier New', monospace;
+          }
+        `}</style>
       </Helmet>
       <Navbar />
       <div>{children}</div>
