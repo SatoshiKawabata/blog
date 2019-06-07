@@ -17,6 +17,15 @@ Gatsbyのプラグインをインストール
 yarn add gatsby-plugin-typescript
 ```
 
+`gatsby-config.js`に`gatsby-plugin-typescript`を追加します。
+
+```
+...
+plugins: [
+    `gatsby-plugin-typescript`,
+...
+```
+
 ### tsconfig.jsonを追加
 ```json
 {
