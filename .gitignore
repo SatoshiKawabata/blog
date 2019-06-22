@@ -7,3 +7,7 @@ public/
 static/admin/*.bundle.*
 .DS_Store
 yarn-error.log
+
+# screenshot test
+**/*.new.png
+**/*.diff.png

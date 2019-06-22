@@ -58,6 +58,7 @@
     "@babel/plugin-transform-object-assign": "^7.2.0",
     "@babel/preset-typescript": "^7.3.3",
     "@types/lodash": "^4.14.123",
+    "@types/puppeteer": "^1.12.4",
     "@types/react": "^16.8.13",
     "@types/react-dom": "^16.8.4",
     "@types/react-helmet": "^5.0.8",
@@ -65,7 +66,10 @@
     "netlify-lambda": "^1.4.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.15.3",
+    "puppeteer": "^1.18.0",
+    "resemblejs": "^3.1.0",
     "rimraf": "^2.6.2",
+    "ts-node": "^8.3.0",
     "typescript": "^3.4.3"
   }
 }
