@@ -103,6 +103,12 @@ module.exports = {
         sitemap: "https://blog.kwst.site/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }]
       }
+    },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-144816615-1"
+      }
     }
   ],
   // for avoiding CORS while developing Netlify Functions locally
