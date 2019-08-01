@@ -12,7 +12,8 @@ module.exports = {
       facebook: "https://www.facebook.com/kawabata.satoshi",
       twitter: "https://twitter.com/kwbtsts",
       github: "https://github.com/SatoshiKawabata"
-    }
+    },
+    siteUrl: "https://blog.kwst.site/"
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -94,6 +95,21 @@ module.exports = {
     "gatsby-plugin-netlify", // make sure to keep it last in the array
     "gatsby-plugin-twitter",
     "gatsby-remark-embed-youtube",
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://blog.kwst.site/",
+        sitemap: "https://blog.kwst.site/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }]
+      }
+    },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-144816615-1"
+      }
+    },
     "gatsby-plugin-offline"
   ],
   // for avoiding CORS while developing Netlify Functions locally
