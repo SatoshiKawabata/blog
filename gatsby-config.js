@@ -3,7 +3,7 @@ var proxy = require("http-proxy-middleware");
 module.exports = {
   siteMetadata: {
     title: "blog.kwst.site",
-    description: "kwst blog",
+    description: "大名ではたらくフロントエンジニアのブログ",
     copyright: {
       name: "kwst.site",
       startYear: 2019
