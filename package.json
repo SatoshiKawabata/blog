@@ -1,7 +1,7 @@
 {
   "name": "blog.kwst.site",
   "description": "kwst blog",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "kwst",
   "dependencies": {
     "babel-loader": "^8.0.5",
