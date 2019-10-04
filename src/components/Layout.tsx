@@ -43,7 +43,7 @@ const TemplateWrapper: React.StatelessComponent<React.Props<{}>> = ({ children }
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="/" />
-        <meta property="og:image" content="/img/og.png" />
+        <meta property="og:image" content="https://blog.kwst.site/img/og.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="fb:app_id" content="876901109074739" />
@@ -51,7 +51,7 @@ const TemplateWrapper: React.StatelessComponent<React.Props<{}>> = ({ children }
         <meta name="twitter:card" content="summary"></meta>
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="/img/logo_180.png" />
+        <meta name="twitter:image" content="https://blog.kwst.site/img/logo_180.png" />
 
         <style>{`
           pre {
