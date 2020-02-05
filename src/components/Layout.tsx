@@ -60,8 +60,9 @@ const TemplateWrapper: React.StatelessComponent<React.Props<{}>> = ({
           }
         `}</style>
         <script
+          data-ad-client="ca-pub-6642788290678044"
           async
-          src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         ></script>
       </Helmet>
       <Navbar />
