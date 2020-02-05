@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent, ContentProps } from "../components/Content";
+import AdSense from "react-adsense";
 
 interface Props {
   content: string;
@@ -20,24 +21,29 @@ export const BlogPostTemplate = ({
   date
 }: Props) => {
   return (
-    <section className="section">
-      {helmet || ""}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{date}</p>
-            {ContentComponent ? (
-              <ContentComponent content={content} />
-            ) : (
-              <Content content={content} />
-            )}
+    <>
+      <section className="section">
+        {helmet || ""}
+        <div className="container content">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+                {title}
+              </h1>
+              <p>{date}</p>
+              {ContentComponent ? (
+                <ContentComponent content={content} />
+              ) : (
+                <Content content={content} />
+              )}
+            </div>
           </div>
         </div>
+      </section>
+      <div>
+        <AdSense.Google client="ca-pub-6642788290678044" slot="" />
       </div>
-    </section>
+    </>
   );
 };
 

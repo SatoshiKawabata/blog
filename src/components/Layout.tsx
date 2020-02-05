@@ -1,12 +1,14 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import './all.sass'
-import useSiteMetadata from './SiteMetadata'
+import React from "react";
+import Helmet from "react-helmet";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import "./all.sass";
+import useSiteMetadata from "./SiteMetadata";
 
-const TemplateWrapper: React.StatelessComponent<React.Props<{}>> = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+const TemplateWrapper: React.StatelessComponent<React.Props<{}>> = ({
+  children
+}) => {
+  const { title, description } = useSiteMetadata();
   return (
     <div>
       <Helmet>
@@ -14,11 +16,7 @@ const TemplateWrapper: React.StatelessComponent<React.Props<{}>> = ({ children }
         <title>{title}</title>
         <meta name="description" content={description} />
 
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/img/logo_180.png"
-        />
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/logo_180.png" />
         <link
           rel="icon"
           type="image/png"
@@ -32,11 +30,7 @@ const TemplateWrapper: React.StatelessComponent<React.Props<{}>> = ({ children }
           sizes="16x16"
         />
 
-        <link
-          rel="mask-icon"
-          href="/img/logo.svg"
-          color="#ff4400"
-        />
+        <link rel="mask-icon" href="/img/logo.svg" color="#ff4400" />
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
@@ -51,7 +45,10 @@ const TemplateWrapper: React.StatelessComponent<React.Props<{}>> = ({ children }
         <meta name="twitter:card" content="summary"></meta>
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="https://blog.kwst.site/img/logo_180.png" />
+        <meta
+          name="twitter:image"
+          content="https://blog.kwst.site/img/logo_180.png"
+        />
 
         <style>{`
           pre {
@@ -62,12 +59,16 @@ const TemplateWrapper: React.StatelessComponent<React.Props<{}>> = ({ children }
             font-family: Menlo, Monaco, 'Courier New', monospace;
           }
         `}</style>
+        <script
+          async
+          src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ></script>
       </Helmet>
       <Navbar />
       <div>{children}</div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default TemplateWrapper
+export default TemplateWrapper;
