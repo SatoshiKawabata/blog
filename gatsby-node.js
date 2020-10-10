@@ -73,7 +73,6 @@ exports.createPages = ({ actions, graphql }) => {
     })
     .then((result) => {
       result.data.allNotionPageBlog.edges.forEach((edge) => {
-        console.log("result", edge);
         createPage({
           path: edge.node.slug,
           component: path.resolve(`src/templates/notion-blog-post.tsx`),
@@ -87,7 +86,6 @@ exports.createPages = ({ actions, graphql }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
-  fmImagesToRelative(node); // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });

@@ -67,7 +67,7 @@ const BlogPost = (p: BlogPostProps) => {
     createdAt,
     imageNodes,
   } = p.data.notionPageBlog;
-  const html = blocksToHtml(blocks, imageNodes);
+  const html = typeof window !== `undefined` ? blocksToHtml(blocks, imageNodes) : "";
 
   const d = new Date(createdAt);
 
