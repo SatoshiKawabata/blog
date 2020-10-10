@@ -18,7 +18,7 @@ export const BlogPostTemplate = ({
   ContentComponent,
   title,
   helmet,
-  date
+  date,
 }: Props) => {
   return (
     <>
@@ -94,7 +94,7 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY.MM.DD")
         title
         description
       }
