@@ -56,10 +56,6 @@ interface BlogPostProps {
 }
 
 const BlogPost = (p: BlogPostProps) => {
-  console.log(p);
-
-  // return <div>あああ</div>;
-  // const { markdownRemark: post } = data || {};
   const {
     title,
     blocks,
@@ -92,20 +88,6 @@ const BlogPost = (p: BlogPostProps) => {
 };
 
 export default BlogPost;
-
-// export const pageQuery = graphql`
-//   query BlogPostByID($id: String!) {
-//     markdownRemark(id: { eq: $id }) {
-//       id
-//       html
-//       frontmatter {
-//         date(formatString: "MMMM DD, YYYY")
-//         title
-//         description
-//       }
-//     }
-//   }
-// `;
 
 export const query = graphql`
   query($pageId: String!) {
