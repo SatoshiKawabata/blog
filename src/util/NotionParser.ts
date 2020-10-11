@@ -7,7 +7,6 @@ import {
 type NotionBlockTypes =
   | "meta"
   | "page"
-  | "text"
   | "quote"
   | "image"
   | "bookmark"
