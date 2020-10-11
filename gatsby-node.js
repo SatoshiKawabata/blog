@@ -73,6 +73,7 @@ exports.createPages = ({ actions, graphql }) => {
     })
     .then((result) => {
       result.data.allNotionPageBlog.edges.forEach((edge) => {
+        console.log("Notion articles", edge.node);
         createPage({
           path: edge.node.slug,
           component: path.resolve(`src/templates/notion-blog-post.tsx`),
