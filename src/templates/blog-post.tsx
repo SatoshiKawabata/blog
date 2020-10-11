@@ -41,7 +41,7 @@ export const BlogPostTemplate = ({
         </div>
       </section>
       <div>
-        <AdSense.Google client="ca-pub-6642788290678044" slot="" />
+        <AdSense.Google client="ca-pub-6642788290678044" slot="6546737488" />
       </div>
     </>
   );
