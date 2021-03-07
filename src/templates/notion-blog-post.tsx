@@ -63,7 +63,8 @@ const BlogPost = (p: BlogPostProps) => {
     createdAt,
     imageNodes,
   } = p.data.notionPageBlog;
-  const html = typeof window !== `undefined` ? blocksToHtml(blocks, imageNodes) : "";
+  const html =
+    typeof window !== `undefined` ? blocksToHtml(blocks, imageNodes) : "";
 
   const d = new Date(createdAt);
 
@@ -89,41 +90,41 @@ const BlogPost = (p: BlogPostProps) => {
 
 export default BlogPost;
 
-export const query = graphql`
-  query($pageId: String!) {
-    notionPageBlog(pageId: { eq: $pageId }) {
-      blocks {
-        blockId
-        blockIds
-        type
-        attributes {
-          att
-        }
-        properties {
-          propName
-          value {
-            text
-            atts {
-              att
-              value
-            }
-          }
-        }
-      }
-      imageNodes {
-        imageUrl
-        localFile {
-          publicURL
-        }
-      }
-      pageId
-      slug
-      title
-      isDraft
-      id
-      indexPage
-      excerpt
-      createdAt
-    }
-  }
-`;
+// export const query = graphql`
+//   query($pageId: String!) {
+//     notionPageBlog(pageId: { eq: $pageId }) {
+//       blocks {
+//         blockId
+//         blockIds
+//         type
+//         attributes {
+//           att
+//         }
+//         properties {
+//           propName
+//           value {
+//             text
+//             atts {
+//               att
+//               value
+//             }
+//           }
+//         }
+//       }
+//       imageNodes {
+//         imageUrl
+//         localFile {
+//           publicURL
+//         }
+//       }
+//       pageId
+//       slug
+//       title
+//       isDraft
+//       id
+//       indexPage
+//       excerpt
+//       createdAt
+//     }
+//   }
+// `;

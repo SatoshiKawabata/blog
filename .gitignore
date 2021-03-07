@@ -11,3 +11,6 @@ yarn-error.log
 # screenshot test
 **/*.new.png
 **/*.diff.png
+
+# VSCode
+.vscode/

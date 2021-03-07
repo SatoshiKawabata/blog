@@ -111,14 +111,14 @@ module.exports = {
       },
     },
     "gatsby-plugin-offline",
-    {
-      resolve: `gatsby-source-notionso`,
-      options: {
-        rootPageUrl:
-          "https://www.notion.so/kwst/Blog-188bb73b88944a34a87a8e53afb181b2",
-        name: "Blog",
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-notionso`,
+    //   options: {
+    //     rootPageUrl:
+    //       "https://www.notion.so/kwst/Blog-188bb73b88944a34a87a8e53afb181b2",
+    //     name: "Blog",
+    //   },
+    // },
   ],
   // for avoiding CORS while developing Netlify Functions locally
   // read more: https://www.gatsbyjs.org/docs/api-proxy/#advanced-proxying

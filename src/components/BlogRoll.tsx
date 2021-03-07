@@ -17,27 +17,27 @@ interface Props extends React.Props<{}> {
         };
       }[];
     };
-    allNotionPageBlog: {
-      edges: {
-        node: {
-          excerpt: string;
-          pageIcon: string;
-          pageId: string;
-          slug: string;
-          title: string;
-          createdAt: string;
-        };
-      }[];
-    };
+    // allNotionPageBlog: {
+    //   edges: {
+    //     node: {
+    //       excerpt: string;
+    //       pageIcon: string;
+    //       pageId: string;
+    //       slug: string;
+    //       title: string;
+    //       createdAt: string;
+    //     };
+    //   }[];
+    // };
   };
 }
 
 const BlogRoll: React.StatelessComponent<Props> = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
-  const { edges: notionPosts } = data.allNotionPageBlog;
+  // const { edges: notionPosts } = data.allNotionPageBlog;
   return (
     <div className="columns is-multiline">
-      {notionPosts &&
+      {/* {notionPosts &&
         notionPosts.map(({ node }) => {
           return (
             <BlogTitle
@@ -48,7 +48,7 @@ const BlogRoll: React.StatelessComponent<Props> = ({ data }) => {
               excerpt={node.excerpt}
             />
           );
-        })}
+        })} */}
       {posts &&
         posts.map(({ node: post }) => {
           return (
@@ -122,21 +122,21 @@ export default () => (
             }
           }
         }
-        allNotionPageBlog(
-          filter: { isDraft: { eq: false } }
-          sort: { fields: [indexPage], order: DESC }
-        ) {
-          edges {
-            node {
-              pageId
-              title
-              slug
-              excerpt
-              pageIcon
-              createdAt
-            }
-          }
-        }
+        # allNotionPageBlog(
+        #   filter: { isDraft: { eq: false } }
+        #   sort: { fields: [indexPage], order: DESC }
+        # ) {
+        #   edges {
+        #     node {
+        #       pageId
+        #       title
+        #       slug
+        #       excerpt
+        #       pageIcon
+        #       createdAt
+        #     }
+        #   }
+        # }
       }
     `}
     render={(data: any) => <BlogRoll data={data} />}
