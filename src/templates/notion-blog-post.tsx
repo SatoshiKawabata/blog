@@ -3,7 +3,6 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent, ContentProps } from "../components/Content";
-import AdSense from "react-adsense";
 import {
   NotionPageDescription,
   NotionImageNodes,

@@ -3,7 +3,6 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent, ContentProps } from "../components/Content";
-import AdSense from "react-adsense";
 
 interface Props {
   content: string;
@@ -40,9 +39,10 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </section>
-      <div style={{ width: "100%" }}>
+      {/* Off adSense */}
+      {/* <div style={{ width: "100%" }}>
         <AdSense.Google client="ca-pub-6642788290678044" slot="6546737488" />
-      </div>
+      </div> */}
     </>
   );
 };
