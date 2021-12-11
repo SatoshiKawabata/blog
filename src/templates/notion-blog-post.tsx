@@ -81,7 +81,7 @@ const BlogPost = (p: BlogPostProps) => {
           </Helmet>
         }
         title={title}
-        date={`${d.getFullYear()}.${d.getMonth()}.${d.getDate()}`}
+        date={`${d.getFullYear()}.${d.getMonth() + 1}.${d.getDate()}`}
       />
     </Layout>
   );

@@ -83,7 +83,7 @@ const BlogTitle = (p: BlogTitleProps) => {
         </p>
         <p>
           <span className="subtitle is-size-5 is-block">
-            {`${d.getFullYear()}.${d.getMonth()}.${d.getDate()}`}
+            {`${d.getFullYear()}.${d.getMonth() + 1}.${d.getDate()}`}
           </span>
         </p>
         <p>
