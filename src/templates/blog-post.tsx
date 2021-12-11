@@ -19,6 +19,7 @@ export const BlogPostTemplate = ({
   helmet,
   date,
 }: Props) => {
+  const d = new Date(date);
   return (
     <>
       <section className="section">
@@ -29,7 +30,7 @@ export const BlogPostTemplate = ({
               <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
                 {title}
               </h1>
-              <p>{date}</p>
+              <p>{`${d.getFullYear()}.${d.getMonth() + 1}.${d.getDate()}`}</p>
               {ContentComponent ? (
                 <ContentComponent content={content} />
               ) : (
@@ -94,7 +95,7 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "YYYY.MM.DD")
+        date
         title
         description
       }
